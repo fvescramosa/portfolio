@@ -35,11 +35,11 @@ export default function Hero({
             <div className="relative z-10 mx-auto content-wrap px-6 py-16 grid gap-10 md:grid-cols-2 items-center h-full">
                 <div>
                     <h1 className="text-4xl font-extrabold md:text-5xl">{name}</h1>
-                    <p className="mt-3 text-slate-300">{subtitle}</p>
+                    <p className="subtitle mt-3 text-slate-300">{subtitle}</p>
 
                     <div className="mt-6 flex flex-wrap gap-2">
                         {badges.map((b) => (
-                            <span key={b} className="rounded-full border px-3 py-1 text-sm text-slate-300">
+                            <span key={b} className="badge">
             {b}
           </span>
                         ))}

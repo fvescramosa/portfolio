@@ -1,7 +1,7 @@
 import heroImg from '../assets/images/hero-section.png'
 
 export const heroData = {
-    id: "home",
+    id: "hero",
     name: "Frank Vinzon B. Escramosa",
     subtitle: "Full-Stack Developer",
     badges: ["Wordpress", "Laravel", "Codeigniter", "PHP", "HTML/CSS/JS"],
