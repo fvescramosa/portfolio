@@ -67,3 +67,28 @@ p{ margin: 0 0 1em 0; color: var(--muted); }
 .badge{ display: inline-block;font-size: 1.1rem;color: #fff;background: #ffffff4a; /* border: 1px solid var(--line); */padding: .35rem .7rem;border-radius: 9px;margin-right: .5rem;margin-bottom: .5rem; }
 #hero h1{font-weight: 700;text-transform: uppercase; color: var(--primary);}
 #hero .subtitle{ color:#fff; font-size: 28px}
+
+/* ---------- Project cards ---------- */
+.card{
+  background: var(--card, #14161e);
+  border: 1px solid var(--line, #20222b);
+  border-radius: var(--radius, 16px);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.20);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 38px rgba(0,0,0,.28);
+  border-color: rgba(255,255,255,.08);
+}
+
+.card__media{ display:block; aspect-ratio: 16/9; overflow:hidden; }
+.card__media img{ width:100%; height:100%; object-fit:cover; display:block; object-position: top center; }
+
+.card__body{ padding: 14px 16px 18px; }
+.card__title{ font-size: var(--h3, 1.6rem); margin: 0 0 .35rem; font-weight: 800; }
+.card__blurb{ color: var(--muted, #b6b7c2); margin: 0 0 .75rem; }
+
+.card__tags{ display:flex; flex-wrap:wrap; gap:.4rem; }
+.chip{ display:inline-block; font-size:.8rem; color:var(--muted, #b6b7c2); border:1px solid var(--line, #20222b); padding:.25rem .6rem; border-radius:999px; }

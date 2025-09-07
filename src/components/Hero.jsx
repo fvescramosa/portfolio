@@ -29,7 +29,7 @@ export default function Hero({
             />
 
             {/* Optional dark overlay */}
-            <div className="absolute inset-0 -z-10 bg-black/35"></div>
+            <div className="absolute inset-0 -z-10 bg-black/44"></div>
 
             {/* Content */}
             <div className="relative z-10 mx-auto content-wrap px-6 py-16 grid gap-10 md:grid-cols-2 items-center h-full">
