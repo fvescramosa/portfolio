@@ -41,7 +41,7 @@
 
 h1,h2,h3,h4,h5,h6{
   margin: 0 0 .5em 0;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.12;
   color: var(--text);
 }
@@ -92,3 +92,118 @@ p{ margin: 0 0 1em 0; color: var(--muted); }
 
 .card__tags{ display:flex; flex-wrap:wrap; gap:.4rem; }
 .chip{ display:inline-block; font-size:.8rem; color:var(--muted, #b6b7c2); border:1px solid var(--line, #20222b); padding:.25rem .6rem; border-radius:999px; }
+
+/* ---------- Skills section ---------- */
+.skillcard{background: var(--card, #14161e);border: 1px solid var(--line, #20222b);border-radius: var(--radius, 16px);padding: 16px;box-shadow: 0 10px 30px rgba(0,0,0,.18);}
+.skillcard__title{ margin: 0 0 12px; font-weight: 800; }
+.skillcard__list{ display: grid; gap: 12px; }
+
+.skill{ display: grid; gap: 8px; }
+.skill__row{display: flex;align-items: center;justify-content: space-between;gap: 12px;}
+.skill__name{ color: var(--text, #f2f2f7); font-weight: 700; }
+.skill__value{ color: var(--muted, #b6b7c2); font-size: .95rem; }
+
+.skill__meter{position: relative;height: 10px;border-radius: 999px;background: color-mix(in srgb, var(--line, #20222b) 80%, transparent);overflow: hidden;border: 1px solid var(--line, #20222b);}
+.skill__bar{position: absolute;inset: 0;width: 0;background: var(--primary, #facc15);box-shadow: inset 0 0 10px rgba(0,0,0,.25);transition: width .45s ease;}
+
+.skill__bar[data-tier="beginner"]    { background: #60a5fa; } /* blue */
+.skill__bar[data-tier="intermediate"]{ background: #facc15; } /* yellow */
+.skill__bar[data-tier="advanced"]    { background: #22c55e; } /* gr
+
+/* ---------- Skills: circular meters ---------- */
+.ring-block{ display:grid; justify-items:center; gap:10px; }
+.ring-label{ font-weight:600; }
+
+/* Donut ring: accent portion + track, with inner hole and centered % text */
+.ring{
+  /* tweak sizes here */
+  --size: 112px;            /* diameter */
+  --thickness: 14px;        /* ring thickness */
+  --accent: #F2CF2D;        /* fallback accent */
+  --track: #2b2d35;         /* background ring color */
+
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+
+  /* visible ring using conic gradient */
+  background: conic-gradient(var(--accent) calc(var(--val) * 1%), var(--track) 0);
+}
+
+/* inner hole */
+.ring::after{
+  content: "";
+  position: absolute; inset: var(--thickness);
+  background: var(--bg, #0b0b0f);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px var(--line, #20222b);
+  z-index: 1;
+}
+
+/* centered percentage text */
+.ring::before{
+  content: attr(data-pct);
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-weight: 800; font-size: 1.05rem; color: #fff;
+  z-index: 2;
+}
+
+/* ---------- Experience Timeline (right column) ---------- */
+.u-muted { color: var(--muted, #b6b7c2); }
+
+.timeline{
+  position: relative;
+  padding-left: 28px;          /* space for the line + dot */
+  margin-top: 10px;
+}
+.timeline::before{
+  content:"";
+  position:absolute; left:10px; top:6px; bottom:6px;
+  width:2px; background: var(--line, #20222b);   /* the vertical line */
+}
+
+.timeline-item{ position: relative; padding-bottom: 40px; }
+.timeline-dot{
+  position: absolute; left:-23px; top:.45rem;
+  width:12px; height:12px; border-radius:50%;
+  background: var(--bg, #0b0b0f);
+  border: 3px solid var(--primary, #F2CF2D);     /* yellow accent */
+  box-shadow: 0 0 0 4px rgba(0,0,0,.35);
+}
+.timeline-content{ margin-left: 8px; }
+
+.timeline-period{
+  margin:0 0 6px;
+  font-weight: 600;
+}
+.timeline-title{
+  margin:0 0 8px;
+  font-weight: 600;
+  color: var(--text, #f2f2f7);
+}
+
+/* bullet list with custom yellow dots */
+.timeline-list{
+  margin:0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+.timeline-list li{
+  list-style: none;
+  position: relative;
+  color: var(--muted, #b6b7c2);
+}
+.timeline-list li::before{
+  content:"";
+  position:absolute; left:-18px; top:.55em;
+  width:6px; height:6px; border-radius:50%;
+  background: var(--primary, #F2CF2D);
+}
+
+.two-col { display:grid; gap:32px; }
+@media (min-width:1024px){
+  .two-col { grid-template-columns: 1fr 1fr; align-items: start; }
+}
