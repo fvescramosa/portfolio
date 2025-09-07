@@ -177,11 +177,13 @@ p{ margin: 0 0 1em 0; color: var(--muted); }
 .timeline-period{
   margin:0 0 6px;
   font-weight: 600;
+  font-size: 1.7rem;
 }
 .timeline-title{
   margin:0 0 8px;
   font-weight: 600;
   color: var(--text, #f2f2f7);
+  font-size: 1.7rem;
 }
 
 /* bullet list with custom yellow dots */
