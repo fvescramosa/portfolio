@@ -10,7 +10,7 @@ export default function Skills({ id = "skills" }) {
                 <p>Core technologies and tools I use in projects.</p>
 
                 {/* Tailwind only for grid layout & gaps */}
-                <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-8 grid gap-6 sm:grid-cols-1 lg:grid-cols-1">
                     {skills.map((cat) => (
                         <SkillCard key={cat.id} title={cat.title} items={cat.items} />
                     ))}

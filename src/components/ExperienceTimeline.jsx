@@ -7,7 +7,7 @@ export default function ExperienceTimeline({
     return (
         <section id={id}>
             <h2>
-                {heading} <span className="u-muted">Mastery</span>
+                {heading} <span className="u-muted">Timeline</span>
             </h2>
 
             <div className="timeline">

@@ -6,10 +6,6 @@ export default function SkillItem({ name, level = 0 }) {
         <div className="skill">
             <div className="skill__row">
                 <span className="skill__name">{name}</span>
-                <span className="skill__value">{safe}%</span>
-            </div>
-            <div className="skill__meter" role="progressbar" aria-valuenow={safe} aria-valuemin="0" aria-valuemax="100">
-                <span className="skill__bar" data-tier={tier} style={{ width: `${safe}%` }} />
             </div>
         </div>
     );

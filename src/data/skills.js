@@ -1,31 +1,35 @@
 export const skills = [
     {
-        id: 'frontend',
-        title: 'Frontend',
+        id: 'expert',
+        title: 'Expert',
         items: [
-            { name: 'React', level: 1 },
-            { name: 'JavaScript', level: 85 },
-            { name: 'CSS / SCSS', level: 85 },
-            { name: 'Tailwind', level: 1 },
+            { name: 'WordPress' },
+            { name: 'Laravel' },
+            { name: 'PHP' },
+            { name: 'HTML5 / CSS3 / SASS' },
+            { name: 'JavaScript / jQuery' },
+            { name: 'Website Optimization (Core Web Vitals, GTMetrix, PSI)' },
         ]
     },
     {
-        id: 'backend',
-        title: 'Backend',
+        id: 'proficient',
+        title: 'Proficient',
         items: [
-            { name: 'Laravel', level: 80 },
-            { name: 'WordPress', level: 88 },
-            { name: 'Codeigniter', level: 80 },
-            { name: 'PHP', level: 88 },
+            { name: 'CodeIgniter' },
+            { name: 'Bootstrap / Foundation' },
+            { name: 'Node.js' },
+            { name: 'MySQL' },
+            { name: 'API Integrations (Google, Facebook, Stripe, Twilio, YouTube)' },
+            { name: 'Adobe XD / FileMaker' },
         ]
     },
     {
-        id: 'tools',
-        title: 'Tools',
+        id: 'learning',
+        title: 'Learning',
         items: [
-            { name: 'Git / GitHub', level: 85 },
-            { name: 'Vite', level: 50 },
-            { name: 'Figma to HTML', level: 80 },
+            { name: 'React.js' },
+            { name: 'Vue.js' },
+            { name: 'Tailwind CSS' },
         ]
     }
 ];
