@@ -4,9 +4,9 @@ export default function SkillItem({ name, level = 0 }) {
 
     return (
         <div className="skill">
-            <div className="skill__row">
-                <span className="skill__name">{name}</span>
-            </div>
+
+                <span className="skill__name badge">{name}</span>
+
         </div>
     );
 }
