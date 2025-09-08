@@ -7,7 +7,7 @@ export default function SkillsAndExperience() {
     return (
         <section className="py-16">
             <div className="content-wrap two-col">
-                <div><SkillsRings /></div>
+                <div><Skills /></div>
                 <div><ExperienceTimeline heading="Career" /></div>
             </div>
         </section>

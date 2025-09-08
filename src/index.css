@@ -95,12 +95,12 @@ p{ margin: 0 0 1em 0; color: var(--muted); }
 
 /* ---------- Skills section ---------- */
 .skillcard{background: var(--card, #14161e);border: 1px solid var(--line, #20222b);border-radius: var(--radius, 16px);padding: 16px;box-shadow: 0 10px 30px rgba(0,0,0,.18);}
-.skillcard__title{ margin: 0 0 12px; font-weight: 800; }
+.skillcard__title{ margin: 0 0 12px; font-weight: 600; color: var(--primary) }
 .skillcard__list{ display: grid; gap: 12px; }
 
 .skill{ display: grid; gap: 8px; }
 .skill__row{display: flex;align-items: center;justify-content: space-between;gap: 12px;}
-.skill__name{ color: var(--text, #f2f2f7); font-weight: 700; }
+.skill__name{     color: var(--text, #f2f2f7);font-weight: normal;font-size: inherit;}
 .skill__value{ color: var(--muted, #b6b7c2); font-size: .95rem; }
 
 .skill__meter{position: relative;height: 10px;border-radius: 999px;background: color-mix(in srgb, var(--line, #20222b) 80%, transparent);overflow: hidden;border: 1px solid var(--line, #20222b);}

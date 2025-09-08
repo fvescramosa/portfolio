@@ -19,6 +19,16 @@ export const experience = [
         ]
     },
     {
+        period: "2021 — 2023",
+        title: "Cognitive Development Learning Center · Part-Time Web Developer",
+        bullets: [
+            "Custom WordPress theme development.",
+            "Built Tutor Search Website using Laravel.",
+            "Integrated FB & Google APIs.",
+            "Designed layouts in Adobe XD.",
+        ]
+    },
+    {
         period: "2019 — 2021",
         title: "Cognitive Development Learning Center · Web Developer",
         bullets: [
